@@ -57,7 +57,7 @@
    
 #### Difference between TCP and UDP:
 
-  TCP                                                                             UDP
+  TCP                                                                             TCP
   
   a. Connection-oriented protocol                                                 a.Connectionless protocol 
   b. Stream oriented                                                              b.Message oriented
