@@ -7,7 +7,7 @@
 
 
 ### General Questions
-**What happens when you type URL?**
+*What happens when you type URL?*
 
 a. Browser checks cache; if requested object is in cache and is fresh, skip to #9
 
