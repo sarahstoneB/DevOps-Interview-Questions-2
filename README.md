@@ -39,5 +39,5 @@
    
 #### Explain the three load averages and what do they indicate?
 
-    Load Average is the value which represents the average load on your system for a specific period of time.
+  Load Average is the value which represents the average load on your system for a specific period of time.
    Three numbers represent load averages in 1min, 5mins and 15 mins It an be seen by "top" or "uptme" cmd.
