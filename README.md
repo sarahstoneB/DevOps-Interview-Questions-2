@@ -8,6 +8,7 @@
 
 ### General Questions
 **What happens when you type URL?**
+
 a. Browser checks cache; if requested object is in cache and is fresh, skip to #9
 b. Browser asks OS for server's IP address.
 c. OS makes a DNS lookup and replies the IP address to the browser.
