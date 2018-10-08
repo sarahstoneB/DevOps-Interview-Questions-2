@@ -7,8 +7,8 @@
    - 1.2 Linux Commands
 ##### 2. AWS Questions
 
-#### 1. Linux Administration
-### 1.1 General Questions
+### 1. Linux Administration
+#### 1.1 General Questions
 
 #### What is DNS?
 
