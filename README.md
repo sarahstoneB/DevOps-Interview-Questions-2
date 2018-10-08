@@ -8,7 +8,7 @@
 ##### 2. AWS Questions
 
 
-### General Questions
+### 1.1 General Questions
 
 #### What is DNS?
 
@@ -79,4 +79,4 @@
 
   **RAID 10:** It is the combination of RAID 0 and RAID 1.
 
- 
+ ### 1.2 Linux Commands
