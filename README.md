@@ -81,9 +81,9 @@
 
  ### 1.2 Linux Commands
  
- **id:** to check uid of the the user (root is always = 0)
+**id:** to check uid of the the user (root is always = 0)
  
- **df -h:** to check the disk space in the file system
+**df -h:** to check the disk space in the file system
  
 **du -h:** to check the disk usage of files and directories on a machine
 
