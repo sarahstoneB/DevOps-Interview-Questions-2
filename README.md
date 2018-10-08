@@ -81,4 +81,20 @@
 
  ### 1.2 Linux Commands
  
- *id:* to check uid of the the user (root is always = 0)
+ **id:** to check uid of the the user (root is always = 0)
+ 
+ **df -h:** to check the disk space in the file system
+ 
+**du -h:** to check the disk usage of files and directories on a machine
+
+**free:** displays amount of free and used memory in the system.
+
+**top:** displays system tasks
+
+**netstat:** lists all the open ports
+
+tail:
+
+curl:
+
+more and less: 
