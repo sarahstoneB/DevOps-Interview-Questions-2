@@ -7,6 +7,11 @@
 
 
 ### General Questions
+
+#### What is DNS?:
+
+  DNS is a domain system which resolves host/domain names into IP adresses.
+
 #### What happens when you type URL?
 
    a. Browser checks cache; if requested object is in cache and is fresh, skip to #9
