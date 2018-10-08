@@ -93,8 +93,4 @@
 
 **netstat:** lists all the open ports
 
-tail:
-
-curl:
-
-more and less: 
+**curl:**  It is  a  tool  to transfer data from or to a server.
