@@ -66,3 +66,15 @@
   d. TCP header size is 20 bytes and UDP Header size is 8 bytes.
   
   e. The speed for TCP is slower than UDP and UDP is faster because error recovery is not attempted. It is a "best effort" protocol.
+  
+ #### What is RAID 0, RAID 1, RAID 5 and RAID 10?
+
+  **RAID 0:** Striped, No redundancy, and good performance. Used for gaming. You stripe if you have two volumes or more. If one disk   fails, the whole RAID array fails(redundancy).
+
+  **RAID 1:** It is mirrored which means you can mirror an exact copy of another disk and redundant.
+
+  **RAID 5:**  3 disks or more. It is good for READS and bad for WRITES. RAID 5 is not recommended to put on EBS. RAID 5 is basically writing the parities(CHECKSUM)
+
+  **RAID 10:** It is the combination of RAID 0 and RAID 1.
+
+ 
