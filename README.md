@@ -57,11 +57,13 @@
    
 #### Difference between TCP and UDP:
 
-  TCP                                                                             TCP
-  
   a. Connection-oriented protocol                                                 a.Connectionless protocol 
+  
   b. Stream oriented                                                              b.Message oriented
+  
   c. TCP is suited for applications that require high reliability,                c.UDP is suitable for applications that need fast, efficient transmission, such as games. 
   and transmission time is relatively less critical.
+  
   d. TCP header size is 20 bytes                                                  d.  UDP Header size is 8 bytes.
+  
   e. The speed for TCP is slower than UDP.                                        e. UDP is faster because error recovery is not      attempted. It is a "best effort" protocol.
