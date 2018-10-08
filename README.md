@@ -8,9 +8,17 @@
 
 ### General Questions
 
-#### What is DNS?:
+#### What is DNS?
 
   DNS is a domain system which resolves host/domain names into IP adresses.
+  
+#### How does DNS work?
+
+  https://dyn.com/blog/dns-why-its-important-how-it-works/
+  
+#### Difference between Telnet and SSH
+
+ They are network protocols used to connect to remote servers. The difference is SSH is more secure where SSH encrypts the data and uses     the public key for authentication and Telnet sends the data as a plain text.
 
 #### What happens when you type URL?
 
