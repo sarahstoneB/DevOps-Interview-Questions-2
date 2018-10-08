@@ -7,7 +7,7 @@
 
 
 ### General Questions
-* What happens when you type URL?
+#### What happens when you type URL?
 
    a. Browser checks cache; if requested object is in cache and is fresh, skip to #9
 
@@ -32,12 +32,12 @@
 
    h. the browser renders response, or offers a download dialog for unrecognized types.
 
-* What is Zombie Process?
+#### What is Zombie Process?
 
    When a process dies, the parent is notified with SIGCHILD signal. The parent is supposed to execute wait() call. If it doesn't,
    the process will stick around in the memory as zombie process.
    
-* Explain the three load averages and what do they indicate?
+#### Explain the three load averages and what do they indicate?
 
     Load Average is the value which represents the average load on your system for a specific period of time.
    Three numbers represent load averages in 1min, 5mins and 15 mins It an be seen by "top" or "uptme" cmd.
