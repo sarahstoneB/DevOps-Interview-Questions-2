@@ -31,3 +31,6 @@
    j. The browser determines what to do with response (e.g. is it a HTML page, is it an image, is it a sound clip?)
 
    h. the browser renders response, or offers a download dialog for unrecognized types.
+
+* What is Zombie Process?
+   When a process dies, the parent is notified with SIGCHILD signal. The parent is supposed to execute wait() call. If it doesn't, the process will stick around in the memory as zombie process.
