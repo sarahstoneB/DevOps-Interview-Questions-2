@@ -18,11 +18,11 @@
 
   https://dyn.com/blog/dns-why-its-important-how-it-works/
   
-- #### Difference between Telnet and SSH
+#### Difference between Telnet and SSH
 
  They are network protocols used to connect to remote servers. The difference is SSH is more secure where SSH encrypts the data and uses     the public key for authentication and Telnet sends the data as a plain text.
 
-- #### What happens when you type URL?
+#### What happens when you type URL?
 
    a. Browser checks cache; if requested object is in cache and is fresh, skip to #9
 
@@ -47,17 +47,17 @@
 
    h. the browser renders response, or offers a download dialog for unrecognized types.
 
-- #### What is Zombie Process?
+#### What is Zombie Process?
 
    When a process dies, the parent is notified with SIGCHILD signal. The parent is supposed to execute wait() call. If it doesn't,
    the process will stick around in the memory as zombie process.
    
-- #### Explain the three load averages and what do they indicate?
+#### Explain the three load averages and what do they indicate?
 
   Load Average is the value which represents the average load on your system for a specific period of time.
    Three numbers represent load averages in 1min, 5mins and 15 mins It an be seen by "top" or "uptme" cmd.
    
-- #### Difference between TCP and UDP:
+#### Difference between TCP and UDP:
 
   a. TCP is Connection-oriented protocol and UDP is Connectionless protocol   
   
@@ -69,7 +69,7 @@
   
   e. The speed for TCP is slower than UDP and UDP is faster because error recovery is not attempted. It is a "best effort" protocol.
   
- - #### What is RAID 0, RAID 1, RAID 5 and RAID 10?
+ #### What is RAID 0, RAID 1, RAID 5 and RAID 10?
 
   **RAID 0:** Striped, No redundancy, and good performance. Used for gaming. You stripe if you have two volumes or more. If one disk   fails, the whole RAID array fails(redundancy).
 
