@@ -10,19 +10,19 @@
 ### 1. Linux Administration
 #### 1.1 General Questions
 
-#### What is DNS?
+##### What is DNS?
 
   DNS is a domain system which resolves host/domain names into IP adresses.
   
-#### How does DNS work?
+##### How does DNS work?
 
   https://dyn.com/blog/dns-why-its-important-how-it-works/
   
-#### Difference between Telnet and SSH
+##### Difference between Telnet and SSH
 
  They are network protocols used to connect to remote servers. The difference is SSH is more secure where SSH encrypts the data and uses     the public key for authentication and Telnet sends the data as a plain text.
 
-#### What happens when you type URL?
+##### What happens when you type URL?
 
 - Browser checks cache; if requested object is in cache and is fresh, skip to #9
 
@@ -47,17 +47,17 @@
 
 - the browser renders response, or offers a download dialog for unrecognized types.
 
-#### What is Zombie Process?
+##### What is Zombie Process?
 
    When a process dies, the parent is notified with SIGCHILD signal. The parent is supposed to execute wait() call. If it doesn't,
    the process will stick around in the memory as zombie process.
    
-#### Explain the three load averages and what do they indicate?
+##### Explain the three load averages and what do they indicate?
 
   Load Average is the value which represents the average load on your system for a specific period of time.
    Three numbers represent load averages in 1min, 5mins and 15 mins It an be seen by "top" or "uptme" cmd.
    
-#### Difference between TCP and UDP:
+##### Difference between TCP and UDP:
 
 - TCP is Connection-oriented protocol and UDP is Connectionless protocol   
   
@@ -69,7 +69,7 @@
   
 - The speed for TCP is slower than UDP and UDP is faster because error recovery is not attempted. It is a "best effort" protocol.
   
- #### What is RAID 0, RAID 1, RAID 5 and RAID 10?
+ ##### What is RAID 0, RAID 1, RAID 5 and RAID 10?
 
   **RAID 0:** Striped, No redundancy, and good performance. Used for gaming. You stripe if you have two volumes or more. If one disk   fails, the whole RAID array fails(redundancy).
 
@@ -79,7 +79,7 @@
 
   **RAID 10:** It is the combination of RAID 0 and RAID 1.
 
- ### 1.2 Linux Commands
+ #### 1.2 Linux Commands
  
 **id:** to check uid of the the user (root is always = 0)
  
