@@ -12,47 +12,56 @@ print
 ```
 
 Now we can use grep to search for any character by providing it with a regular expression. Let's use grep to search for a character "e":
-
+```
 $ grep e regex.txt                                          
 grep stands for:
 regular
 expression
+```
 As you can see from the example above, grep printed all lines comprising of at least one "e" character. We can now combine multiple characters to form a string "regu" and use grep to search for a string in the text:
-
+```
 $ grep regu regex.txt 
 regular
+```
 To unleash the real power of regular expressions though, we need to form a regular expression from non-alphabetic ( meta-characters ) characters or from the combination of alphabetic and non-alphabetic characters. For example, what if you want to search all lines which begin with character "g"? For this we can use a caret symbol "^":
-
+```
 $ grep ^g regex.txt 
 grep stands for:
 global
+```
 This was just a fundamental example of more sophisticated regular expression. In this article, we will explain more regular expression's techniques as the one above in the more detail.
 
 Concatenation
 As you can see on our preceding example, the simplest regular expression can consist of an individual character. Hence a regular expression consisting of a single non-special character will match any given string containing that character. The nature of Regular Expressions permits for concatenation of multiple other Regular Expressions. Which means that a set of characters such as "press" will match any string that contains a substring formed by concatenation of several regular expressions "p","r","e","s" and "s".
-
+```
 $ cat regex.txt 
 grep stands for:                                                                   
 global                                                                             
 regular                                                                            
 expression                                                                         
 print
+```
+```
 $ grep press regex.txt 
 expression
-Basic vs Extended Regular Expressions
+```
+
+### Basic vs Extended Regular Expressions
 GNU grep understands both, basic and extended regular expressions. The prime difference is that in basic regular expressions, the meta-characters: ?, +, {, |, (, and ) lose their special meaning. To give meta-characters its special meaning they need to be escaped with backslash character. Think over a following example:
 
 Our regex.txt file now contains the following:
-
+```
 $ cat regex.txt 
 global|regular|expression|print
 Global Regular Expression Print
+```
 grep command assumes basic regular expression as a default. Therefore, the following linux command will print exclusively first line only considering that it contains substring "n|p":
-
+```
 $ grep "n|p" regex.txt 
 global|regular|expression|print
+```
 The "|" alteration operator has its own special meaning, and that is logical OR. However, this special meaning was suppressed in the previous example since grep by default threats any regular expression as a basic regular expression. To make grep read extended regular expressions, we need to use option -E or simply use egrep instead of grep.
-
+```
 $ grep -E "n|p" regex.txt 
 global|regular|expression|print
 Global Regular Expression Print
@@ -60,11 +69,13 @@ OR
 $ egrep "n|p" regex.txt 
 global|regular|expression|print
 Global Regular Expression Print
+```
 In the preceding example, we used grep with extended regular expression, and thus it displays both lines, which contain n OR p character. As said previously the meta-characters lost their special meaning when expressed as basic regular expressions, unless they are escaped with "\" character. Let's re-use our first example but this time, we escape the "|" character:
-
+```
 $ grep "n\|p" regex.txt 
 global|regular|expression|print
 Global Regular Expression Print
+```
 In this case alteration operator "|" retains its special meaning and acts as logical OR even though we did not use -E option or egrep.
 
 We also said that when using egrep or -E option, grep presumes to be fed with Extended Regular Expressions. Because of that, if you escape a meta character in extended regular expression context it will lose its special meaning and behave as a literal character "|". If you followed up to here you will notice that this is again exact opposite of basic regular expressions.
