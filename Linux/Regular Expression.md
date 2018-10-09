@@ -14,7 +14,6 @@ regular
 expression       
 
 print
-
 ```
 
 Now we can use grep to search for any character by providing it with a regular expression. Let's use grep to search for a character "e":
