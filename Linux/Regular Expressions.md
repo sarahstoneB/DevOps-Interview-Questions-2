@@ -160,59 +160,68 @@ b
 c
   <-- space
 ```
-Anchoring
+### Anchoring
 Anchoring is a regular expression technique which engages caret ^ symbol and the dollar sign $ as meta-characters to match the empty string from the beginning and at the end of the line respectively.
 
 Let's find all lines within /etc/services file, which start with string "ftp":
-
+```
 $ grep ^ftp /etc/services 
 ftp-data        20/tcp
 ftp             21/tcp
 ftps-data       989/tcp                         # FTP over SSL (data)
 ftps            990/tcp
+```
 As an opposite example we can use regex anchoring to find all lines ending with ftp:
-
+```
 $ grep ftp$ /etc/services 
 zope-ftp        8021/tcp
+```
 NOTE:Do not mistake caret's ^ meaning with a caret symbol used within bracket expression as they have quite distinct significance in their respective context.
 
 The Backslash Character and Special Expressions
 There are numerous system tools, including grep, which support "Special Expressions" also known as word boundaries. Here are some Special Expression symbols supported by grep and many other system utilities:
-
+```
 \< - match empty string at the beginning of the word
 \> - match empty string at the end of the word
 \b - match empty string at the beginning and end of the word
 \B - match except at the beginning or end of a word
+```
 Let's start with \< which will match empty string from the beginning of the word. Here is our tester file:
-
+```
 $ cat regex.txt 
 RegularExpressions
 Regular ExpressionsRegular Expressions
+```
 The following Regular Expression will match both lines because there is an empty string before word "Regular" on each line:
-
+``
 $ grep "\<Regular" regex.txt 
 RegularExpressions
 Regular ExpressionsRegular Expressions
+```
 The next example will only display second line considering that we use \> to match empty string also at the end of the word:
-
+```
 $ grep "\<Regular\>" regex.txt 
 Regular ExpressionsRegular Expressions
+```
 The meaning of \b is similar, but it will match both, empty string from the beginning and end of the word:
-
+```
 $ grep "\bExpressions\b" regex.txt 
 Regular ExpressionsRegular Expressions
+```
 Whereas \B will only match when not at the beginning or end of the word:
-
+```
 $ grep "\bExpressions\B" regex.txt 
 Regular ExpressionsRegular Expressions
+```
 For completeness of this section here are some other special expressions available for grep. Please note that following symbols are simply an abbreviation of above-mentioned Character Classes:
-
+```
 \s - Match any whitespace characters (space, tab, etc.). alias [:space:]
 \S - Match any character but whitespace (space, tab, etc.). alias [^[:space:]]
 \w - Match any character in the range 0 - 9, A - Z and a - z alias [:alnum:]
 \W - Match any character but the range 0 - 9, A - Z and a - z alias [^[:alnum:]]
+```
 Here are some examples of Character Classes abbreviations:
-
+```
 $ cat regex.txt 
 
 abcd
@@ -235,10 +244,11 @@ abcd
 1234
 Match all non-alphanumeric ( includes whitespace )characters:
 
-$ grep "\W" regex.txt 
-        
+$ grep "\W" regex.txt      
 "
-Repetition
+```
+
+### Repetition
 A regular expression may be followed by one or several repetition quantifiers. Before you continue with this section, please take a look at the table below:
 
 ? - The preceding item is optional and matched at most once
