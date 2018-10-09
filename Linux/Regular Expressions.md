@@ -83,30 +83,36 @@ In this case alteration operator "|" retains its special meaning and acts as log
 We also said that when using egrep or -E option, grep presumes to be fed with Extended Regular Expressions. Because of that, if you escape a meta character in extended regular expression context it will lose its special meaning and behave as a literal character "|". If you followed up to here you will notice that this is again exact opposite of basic regular expressions.
 
 Example:
-
+```
 $ egrep "n\|p" regex.txt 
 global|regular|expression|print
-Bracket Expressions
-Now, that we are acquainted with basics of regular expressions, we can engage our exploration into a more powerful and yet more complex nature of regular expressions. The first stop will be the use of "[" and "]" known as "Bracket Expressions". The story behind the "Bracket Expressions" is that any characters enclosed by "[" and "]" will match any single character in that list. Let's wrap a letter "e" with "[]" and see what happens:
+```
 
+### Bracket Expressions
+
+Now, that we are acquainted with basics of regular expressions, we can engage our exploration into a more powerful and yet more complex nature of regular expressions. The first stop will be the use of "[" and "]" known as "Bracket Expressions". The story behind the "Bracket Expressions" is that any characters enclosed by "[" and "]" will match any single character in that list. Let's wrap a letter "e" with "[]" and see what happens:
+```
 $ cat regex.txt 
 global|regular|expression|print
 Global Regular Expression Print
 $ grep [e]xpression regex.txt 
 global|regular|expression|print
+```
 As you can see nothing unusual happened here. Our current regular expression merely matched keyword "expression" and grep therefore printed respective line. On that ground, the following regular expression will also do the same trick:
-
+```
 $ grep expression regex.txt 
 global|regular|expression|print
+```
 The power of Bracket Expression comes when you want to match for example a single character in the "[]" list. This is demonstrated in the following example:
-
+```
 $ grep [eE]xpression regex.txt 
 global|regular|expression|print
 Global Regular Expression Print
+```
 Can you think of a way how to formulate a regular expression alternative to the above example without using "[ ] "? Such technique has been already shown earlier!
 
 Using Bracket Expression it is also possible to express a logical NOT. For this we can use a caret symbol "^". In the following example, we use a regular expression to extract all lines holding any characters with the exclusion of characters "a" and "c".
-
+```
 $ cat regex.txt 
 a
 b
@@ -115,9 +121,12 @@ d
 $ grep [^ac] regex.txt 
 b
 d
-Expression Range
-Bracket expression also allows you to specify an expression range. Expression range comprises of minimum two characters separated by a hyphen. What it means, is that instead of [0123456789] we can simply use [0-9] or instead of [abc] we can use [a-c]. This is illustrated in the following regex example:
+```
 
+### Expression Range
+
+Bracket expression also allows you to specify an expression range. Expression range comprises of minimum two characters separated by a hyphen. What it means, is that instead of [0123456789] we can simply use [0-9] or instead of [abc] we can use [a-c]. This is illustrated in the following regex example:
+```
 $ cat regex.txt 
 a
 b
@@ -125,7 +134,8 @@ c
 d
 $ grep [^a-c] regex.txt 
 d
-Character Classes
+```
+### Character Classes
 What follows are pre-defined classes for you to use within bracket expressions.
 
 [:alnum:] - Alphanumeric characters	[:alpha:] - Alphabetic characters
@@ -135,7 +145,7 @@ What follows are pre-defined classes for you to use within bracket expressions.
 [:space:] - Space characters	[:upper:] - Upper-case letters
 [:xdigit:] - Hexadecimal digits	
 In the following regular expression example, we will use [:lower:] and [:space:] to print only lines, which contain lower-case letter(s) or space:
-
+```
 cat regex.txt 
 1
 2
@@ -149,6 +159,7 @@ $ grep [[:lower:][:space:]] regex.txt
 b
 c
   <-- space
+```
 Anchoring
 Anchoring is a regular expression technique which engages caret ^ symbol and the dollar sign $ as meta-characters to match the empty string from the beginning and at the end of the line respectively.
 
