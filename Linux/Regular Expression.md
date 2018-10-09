@@ -2,12 +2,12 @@
 
 The simplest building block of any regular expression is a character. We can use grep to search for any particular character from within a text of any given non-binary file. For example, here is a content of our regex.txt sample file:
 
-$ cat regex.txt 
+`$ cat regex.txt 
 grep stands for:                                                                   
 global                                                                             
 regular                                                                            
 expression                                                                         
-print
+print`
 Now we can use grep to search for any character by providing it with a regular expression. Let's use grep to search for a character "e":
 
 $ grep e regex.txt                                          
