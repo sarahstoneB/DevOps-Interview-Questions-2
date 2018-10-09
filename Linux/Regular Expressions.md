@@ -193,12 +193,14 @@ RegularExpressions
 Regular ExpressionsRegular Expressions
 ```
 The following Regular Expression will match both lines because there is an empty string before word "Regular" on each line:
-``
+```
 $ grep "\<Regular" regex.txt 
 RegularExpressions
 Regular ExpressionsRegular Expressions
 ```
+
 The next example will only display second line considering that we use \> to match empty string also at the end of the word:
+
 ```
 $ grep "\<Regular\>" regex.txt 
 Regular ExpressionsRegular Expressions
