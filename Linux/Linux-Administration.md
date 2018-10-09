@@ -20,7 +20,7 @@
 
   **RAID 10:** It is the combination of RAID 0 and RAID 1.
 
- #### 1.2 Linux Commands
+ ### Linux Commands
  
 **id:** to check uid of the the user (root is always = 0)
  
