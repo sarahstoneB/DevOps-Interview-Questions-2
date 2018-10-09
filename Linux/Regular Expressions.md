@@ -1,4 +1,6 @@
-## Simple Regular Expression example
+# Regular Expressions
+
+### Simple Regular Expression example
 
 The simplest building block of any regular expression is a character. We can use grep to search for any particular character from within a text of any given non-binary file. For example, here is a content of our regex.txt sample file:
 
