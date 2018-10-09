@@ -4,15 +4,10 @@ The simplest building block of any regular expression is a character. We can use
 
 ```
 $ cat regex.txt 
-
 grep stands for:  
-
 global           
-
 regular          
-
 expression       
-
 print
 ```
 
