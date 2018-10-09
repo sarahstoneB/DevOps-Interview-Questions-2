@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-### 1. Linux Administration
-   - 1.1 General Questions
-   - 1.2 Linux Commands
+### 1. Linux
+   - 1.1 Linux Administration
+   - 1.2 Networking
 ### 2. AWS Questions
 
