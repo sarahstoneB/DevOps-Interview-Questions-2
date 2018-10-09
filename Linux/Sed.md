@@ -5,56 +5,61 @@ SED command in UNIX is stands for stream editor and it can perform lot’s of fu
 SED is a powerful text stream editor. Can do insertion, deletion, search and replace(substitution).
 SED command in unix supports regular expression which allows it perform complex pattern matching.
 Syntax:
-
+```
 sed OPTIONS... [SCRIPT] [INPUTFILE...] 
+```
 Example:
 Consider the below text file as an input.
-
+```
 $cat > geekfile.txt
 unix is great os. unix is opensource. unix is free os.
 learn operating system.
 unix linux which one you choose.
 unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
-Sample Commands
+```
 
-Replacing or substituting string : Sed command is mostly used to replace the text in a file. The below simple sed command replaces the word “unix” with “linux” in the file.
+### Sample Commands
+
+**Replacing or substituting string :** Sed command is mostly used to replace the text in a file. The below simple sed command replaces the word “unix” with “linux” in the file.
+```
 $sed 's/unix/linux/' geekfile.txt
 Output :
-
-
-
 linux is great os. unix is opensource. unix is free os.
 learn operating system.
 linux linux which one you choose.
 linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+```
 Here the “s” specifies the substitution operation. The “/” are delimiters. The “unix” is the search pattern and the “linux” is the replacement string.
 
 By default, the sed command replaces the first occurrence of the pattern in each line and it won’t replace the second, third…occurrence in the line.
 
 Replacing the nth occurrence of a pattern in a line : Use the /1, /2 etc flags to replace the first, second occurrence of a pattern in a line. The below command replaces the second occurrence of the word “unix” with “linux” in a line.
+```
 $sed 's/unix/linux/2' geekfile.txt
 Output:
-
 unix is great os. linux is opensource. unix is free os.
 learn operating system.
 unix linux which one you choose.
 unix is easy to learn.linux is a multiuser os.Learn unix .unix is a powerful.
+```
 Replacing all the occurrence of the pattern in a line : The substitute flag /g (global replacement) specifies the sed command to replace all the occurrences of the string in the line.
+```
 $sed 's/unix/linux/g' geekfile.txt
 Output :
-
 linux is great os. linux is opensource. linux is free os.
 learn operating system.
 linux linux which one you choose.
 linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+```
 Replacing from nth occurrence to all occurrences in a line : Use the combination of /1, /2 etc and /g to replace all the patterns from the nth occurrence of a pattern in a line. The following sed command replaces the third, fourth, fifth… “unix” word with “linux” word in a line.
+```
 $sed 's/unix/linux/3g' geekfile.txt
 Output:
-
 unix is great os. unix is opensource. linux is free os.
 learn operating system.
 unix linux which one you choose.
 unix is easy to learn.unix is a multiuser os.Learn linux .linux is a powerful.
+```
 Parenthesize first character of each word : This sed example prints the first character of every word in paranthesis.
 $ echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
 Output:
