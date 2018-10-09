@@ -252,7 +252,7 @@ $ grep "\W" regex.txt
 
 ### Repetition
 A regular expression may be followed by one or several repetition quantifiers. Before you continue with this section, please take a look at the table below:
-
+```
 ? - The preceding item is optional and matched at most once
 * - The preceding item will be matched zero or more times.
 + - The preceding item will be matched one or more times.
@@ -260,7 +260,8 @@ A regular expression may be followed by one or several repetition quantifiers. B
 {n,} - The preceding item is matched n or more times.
 {n,m} - The preceding item is matched at least n times, but not more than m times.
 Let's begin by creating our sample file regex.txt:
-
+```
+```
 $ cat regex.txt 
 Expressions
 Expressssssions
@@ -272,41 +273,47 @@ First repetition example will use "?":
 $ grep -E "Expres?ions" regex.txt 
 Expresions
 Expreions
+```
 As described in the table above, the usage of "?" quantifier is to match preceding item at most once or to make the previous item optional. The previous item in our case is a character "s". Therefore, grep matched only strings with none or single character "s" followed by string "ions". Next quantifier we are going to take a look at is "*" which by definition will match previous item zero or more times.
-
+```
 $ grep -E "Expres*ions" regex.txt 
 Expressions
 Expressssssions
 Expresssions
 Expresions
 Expreions
+```
 As illustrated above the "*" quantifier will match all strings in our test file. If you wonder why it also matched "Expreions" keep in mind that the "*" quantifier makes the preceding item optional as opposed to "+" quantifier, which must match preceding item at least once or more times:
-
+```
 $ grep -E "Expres+ions" regex.txt 
 Expressions
 Expressssssions
 Expresssions
 Expresions
+```
 With the "{n}" quantifier you can specify precisely how many times the previous item will be matched. For example our:
-
+```
 $ grep -E "Expres{3}ions" regex.txt 
 Expresssions
+```
 command will match string, which starts with "Expre" followed by 3 x "s" and followed by "ions". To stretch our previous regular expression "{n,}" futher, we can specify the minimum value of how many times the preceding item will be matched. As a result, "{3,}" repetition would match 3 or more times:
-
+```
 $ grep -E "Expres{3,}ions" regex.txt 
 Expressssssions
 Expresssions
+```
 To extend the above regular expression even further we can specify range. Therefore, we replace "{3,}" with "{1,3}" and the following regex would match:
-
+```
 $ grep -E "Expres{1,3}ions" regex.txt 
 Expressions
 Expresssions
 Expresions
+```
 since the previous item "s" is matched at the minimum once but no more than three times.
 
-Alternation
+### Alternation
 You can think of regex alternation as a logical OR operation where regular expressions can be joined together by one or more "|" alteration operators. As a result, this regular expression will match any string corresponding to either alternate regular expression.
-
+```
 $ cat regex.txt                                   
 grep stands for:                                                                                  
 global                                                                                            
@@ -316,17 +323,20 @@ print
 $ grep -E "^r|^e" regex.txt                                                
 regular                                                                            
 expression
-Precedence
-When forming expressions, there is another property of Regular Exppresisons to consider and that is precedence. Similar as it is with arithmetic calculations, regular expressions follow predefined precedence. The highest precedence takes "Repetition" followed by "Concatenation" and the lowest precedence belongs to "Alternation". Consider a following example:
+```
 
+### Precedence
+When forming expressions, there is another property of Regular Exppresisons to consider and that is precedence. Similar as it is with arithmetic calculations, regular expressions follow predefined precedence. The highest precedence takes "Repetition" followed by "Concatenation" and the lowest precedence belongs to "Alternation". Consider a following example:
+```
 $ cat regex.txt 
 regex
 regexxx
 $ grep -E "regex{3}" regex.txt 
 regexxx
+```
 In the aforementioned regular expression, we can see both, Concatenation "regex" and Repetition "x{3}". Since the repetition has higher precedence the above regular expression will match "regexxx" but not "regex".
 Another example where precedence needs to be taken into account is when using Alteration operator "|" which has the lowest precedence from all regular expressions. Consider a following example:
-
+```
 $ cat regex.txt 
 regular expressions
 regular
@@ -335,23 +345,28 @@ $ grep -E "^regular|expressions$" regex.txt
 regular expressions
 regular
 expressions
+```
 Since the alteration operator "|" has lowest precedence the above regular expression will match any concatenated expression. In our case, it will be "regular" with anchor "^" and "expressions" with an end of the line anchor "$". In order to give any regex operator higher precedence we need to use "()". In the following example, we will use "()" to override Alteration operator precedence to a higher priority, which makes noticeable difference:
-
+```
 $ grep -E "^(regular|expressions)$" regex.txt 
 regular
 expressions
+```
 In this example, the alteration operator is evaluated first as it creates a simple subexpression using "()". Therefore, as a result the above regular expression will only match lines, which contain "^regular$" OR "^expressions$".
 
 Back References and Subexpressions
 Any substring folded by "()" will create a subexpression which can be used as a back reference in succeeding regular expression. This is illustrated by the following example:
-
+```
 $ cat regex.txt 
 regular expressions
 $ grep -E "(re)gular expssions" regex.txt
 regular expressions
+```
 Subexpression of concatenated regular expression "re" is used as a back reference later when forming regular expression by use of \1 digit. The order used to form subexpressions "n" needs to be consistent with back reference "\n":
-
+```
 $ grep -E "(r)(e)gular xpssions" regex.txt
 regular expressions
-Conclusion
+```
+
+### Conclusion
 Regular expressions are very powerful tool in hands of any system admin, programmer ( BASH, PHP, C#, Java and many more.. ) or casual Linux/Unix command line user. This article attempted to describe in some simple, consistent and plain English manner the basics of Regular Expressions upon which you can further develop your Regular Expressionsskills and thus save yourself from tedious work which text processing can sometimes offer.
