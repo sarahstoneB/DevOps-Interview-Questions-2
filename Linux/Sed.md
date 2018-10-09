@@ -119,31 +119,32 @@ linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful
 ```
 Here $ indicates the last line in the file. So the sed command replaces the text from second line to last line in the file.
 
-Deleting lines from a particular file : SED command can also be used for deleting lines from a particular file. SED command is used for performing deletion operation without even opening the file
+**10. Deleting lines from a particular file :** SED command can also be used for deleting lines from a particular file. SED command is used for performing deletion operation without even opening the file
+
 Examples:
 1. To Delete a particular line say n in this example
 Syntax:
 $ sed 'nd' filename.txt
 Example:
 $ sed '5d' filename.txt
-2. To Delete a last line
 
+2. To Delete a last line
 Syntax:
 $ sed '$d' filename.txt
-3. To Delete line from range x to y
 
+3. To Delete line from range x to y
 Syntax:
 $ sed 'x,yd' filename.txt
 Example:
 $ sed '3,6d' filename.txt
-5. To Delete from nth to last line
 
+4. To Delete from nth to last line
 Syntax:
 $ sed 'nth,$d' filename.txt
 Example:
 $ sed '12,$d' filename.txt
-6. To Delete pattern matching line
 
+5. To Delete pattern matching line
 Syntax:
 $ sed '/pattern/d' filename.txt
 Example:
