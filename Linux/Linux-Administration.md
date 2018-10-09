@@ -1,5 +1,7 @@
 # Linux Administration Questions
 
+### General Questions
+
 ##### What is Zombie Process?
 
    When a process dies, the parent is notified with SIGCHILD signal. The parent is supposed to execute wait() call. If it doesn't,
