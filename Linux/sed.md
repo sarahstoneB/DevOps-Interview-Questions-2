@@ -123,8 +123,12 @@ Here $ indicates the last line in the file. So the sed command replaces the text
 ```
 $ sed -n '10,20p' filename.txt
 ```
+**11. Print the lines containing specific pattern:** Use the combination -n option and /p option to print the lines containing the pattern
+```
+$sed -n 'hello/p' filename.txt
+```
 
-**11. Deleting lines from a particular file :** SED command can also be used for deleting lines from a particular file. SED command is used for performing deletion operation without even opening the file
+**12. Deleting lines from a particular file :** SED command can also be used for deleting lines from a particular file. SED command is used for performing deletion operation without even opening the file
 
 Examples:
 1. To Delete a particular line say n in this example
