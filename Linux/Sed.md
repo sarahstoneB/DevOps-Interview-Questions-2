@@ -123,29 +123,36 @@ Here $ indicates the last line in the file. So the sed command replaces the text
 
 Examples:
 1. To Delete a particular line say n in this example
+```
 Syntax:
 $ sed 'nd' filename.txt
 Example:
 $ sed '5d' filename.txt
+```
 
 2. To Delete a last line
+```
 Syntax:
 $ sed '$d' filename.txt
-
+```
 3. To Delete line from range x to y
+```
 Syntax:
 $ sed 'x,yd' filename.txt
 Example:
 $ sed '3,6d' filename.txt
-
+```
 4. To Delete from nth to last line
+```
 Syntax:
 $ sed 'nth,$d' filename.txt
 Example:
 $ sed '12,$d' filename.txt
-
+```
 5. To Delete pattern matching line
+```
 Syntax:
 $ sed '/pattern/d' filename.txt
 Example:
 $ sed '/abc/d' filename.txt
+```
