@@ -10,7 +10,7 @@
   Because, I have firm understanding of basics, I feel that I good to be in the devops role.
 
 ##### What is your career objective?
-  My passion is breaking down the barriers and building and improving processes, so that the engineering and operations teams work better and smarter.
+  My passion is breaking down the barriers and building and improving processes, so that the development and operations teams work better and smarter.
   That’s why I love DevOps. It’s an opportunity to be involved in the entire delivery system from start to finish.
 
 ##### Project:
