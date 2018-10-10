@@ -11,7 +11,7 @@
 A network address translation (NAT) gateway is used to enable instances in a private subnet to connect to the internet or other AWS services, but prevent the internet from initiating a connection with those instances. NAT gateways are created in a public subnet.
 
 ##### How do you enable cross account access?
-  1. Log in to Prod Accunt ->  Create the required policy -> Apply the policy to cross account role
+  1. Log in to Prod Accunt ->  Create the required policy -> -> Create Cross account Role and give the AWS Dev account ID -> Apply the policy to role
   2. Log in to Dev account -> Create inline policy -> Attach the policy to the User -> Switch Account
   
 ##### What are the differences between security groups in a VPC and network ACLs in a VPC?
