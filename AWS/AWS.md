@@ -25,3 +25,5 @@ A network address translation (NAT) gateway is used to enable instances in a pri
 
 ##### What is VPC peering?
   It is network connection between two VPCs that enables traffic between them.
+  
+##### What is RDS Multi-AZ and Read Replicas?
