@@ -12,7 +12,7 @@ A network address translation (NAT) gateway is used to enable instances in a pri
 
 ##### How do you enable cross account access?
   1. Log in to Prod Accunt ->  Create the required policy -> Create cross account role and give the AWS Dev account ID -> Apply the policy to role
-  2. Log in to Dev account -> Create inline policy -> Attach the policy to the User -> Switch Account
+  2. Log in to Dev account -> Create inline policy with Prod account ID and the role -> Attach the policy to the User -> Switch Account
   
 ##### What are the differences between security groups in a VPC and network ACLs in a VPC?
   Security groups in a VPC specify which traffic is allowed to or from an Amazon EC2 instance. Network ACLs operate at the subnet level and evaluate traffic entering and exiting a subnet.
