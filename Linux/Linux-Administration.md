@@ -37,3 +37,5 @@
 **netstat:** lists all the open ports
 
 **curl:**  It is  a  tool  to transfer data from or to a server.
+
+**lsof:**  It lists all the files opened
