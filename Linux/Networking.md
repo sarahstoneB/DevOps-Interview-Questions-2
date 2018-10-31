@@ -15,6 +15,10 @@
 ##### When does DNS use TCP instead of UDP?
 The Transmission Control Protocol (TCP) is used when the response data size exceeds 512 bytes, or for tasks such as zone transfers.
 Some DNS transactions, such as zone transfers or queries with additional extensions may yield packets greater than 512 bytes in size, so will use TCP instead
+
+##### What is DHCP?
+
+DHCP (Dynamic Host Configuration Protocol) is a network management protocol used to dynamically assign an Internet Protocol (IP) address to any device, or node, on a network so they can communicate using IP. DHCP automates and centrally manages these configurations rather than requiring network administrators to manually assign IP addresses to all network devices.
   
 ##### Difference between Telnet and SSH
 
