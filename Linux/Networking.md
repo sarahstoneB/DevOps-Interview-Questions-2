@@ -8,6 +8,10 @@
 
   https://dyn.com/blog/dns-why-its-important-how-it-works/
   
+##### What are different types of DNS records?
+ 
+  https://www.cloudwards.net/what-are-dns-records/
+  
 ##### Difference between Telnet and SSH
 
  They are network protocols used to connect to remote servers. The difference is SSH is more secure where SSH encrypts the data and uses     the public key for authentication and Telnet sends the data as a plain text.
