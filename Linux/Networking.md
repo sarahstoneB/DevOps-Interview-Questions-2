@@ -12,6 +12,10 @@
  
   https://www.cloudwards.net/what-are-dns-records/
   
+##### When does DNS use TCP instead of UDP?
+The Transmission Control Protocol (TCP) is used when the response data size exceeds 512 bytes, or for tasks such as zone transfers.
+Some DNS transactions, such as zone transfers or queries with additional extensions may yield packets greater than 512 bytes in size, so will use TCP instead
+  
 ##### Difference between Telnet and SSH
 
  They are network protocols used to connect to remote servers. The difference is SSH is more secure where SSH encrypts the data and uses     the public key for authentication and Telnet sends the data as a plain text.
