@@ -12,6 +12,9 @@
 ##### What is your career objective?
   My passion is breaking down the barriers and building and improving processes, so that the development and operations teams work better and smarter.
   That’s why I love DevOps. It’s an opportunity to be involved in the entire delivery system from start to finish.
+  
+##### What are you looking as a DevOps Engineer?
+  A challenging environment that pushes me everyday, with a fun and laid-back, non-toxic company culture, and the ability to be the best I can be.
 
 ##### Project:
   One of the projects I workn on is a web application called AVA. AVA is a bot which helps the customer by answering their questions either by the text or through voice.
