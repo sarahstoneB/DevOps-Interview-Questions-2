@@ -41,3 +41,5 @@
 **lsof:**  It lists all the files opened
 
 **chkconfig:** It list all the servies with their respective run levels
+
+**$?:** Tells the exit status of the current command
