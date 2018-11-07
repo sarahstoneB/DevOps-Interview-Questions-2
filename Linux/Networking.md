@@ -61,7 +61,14 @@ DHCP (Dynamic Host Configuration Protocol) is a network management protocol used
   
 - The speed for TCP is slower than UDP and UDP is faster because error recovery is not attempted. It is a "best effort" protocol.
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| Field Name          | Description                                           |
+| :---                |     :---:                                             |
+| Accept              | Acceptable Media Types                                |
+| Accept-Encoding     | Acceptable Encodings                                  |
+| Authorization       | Authentication credentials for HTTP authentication.   |
+| Accept-Encoding     | Acceptable Encodings                                  |
+| Content-Length      | The length of the request body in bytes               |
+| Content-Type        | The content type of the body of the request           |
+| Cookies             |                                                       |
+| Date                | Date and time the request was sent                    |
+
