@@ -60,3 +60,8 @@ DHCP (Dynamic Host Configuration Protocol) is a network management protocol used
 - TCP header size is 20 bytes and UDP Header size is 8 bytes.
   
 - The speed for TCP is slower than UDP and UDP is faster because error recovery is not attempted. It is a "best effort" protocol.
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
