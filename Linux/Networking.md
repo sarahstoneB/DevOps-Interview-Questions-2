@@ -61,6 +61,8 @@ DHCP (Dynamic Host Configuration Protocol) is a network management protocol used
   
 - The speed for TCP is slower than UDP and UDP is faster because error recovery is not attempted. It is a "best effort" protocol.
 
+##### HTTP request header fields:
+
 | Field Name          | Description                                           |
 | :---                |     :---:                                             |
 | Accept              | Acceptable Media Types                                |
